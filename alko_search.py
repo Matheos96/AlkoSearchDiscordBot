@@ -75,7 +75,6 @@ def get_result_as_array(uri, search_term, nr_of_pages):
 
 def search(search_term):
     url = get_url + search_term
-    print(url)
     page = client.get(url)
     parsed = BeautifulSoup(page.content, 'lxml')
     # search_url = str(parsed.find('form', attrs={'name': 'paginating'}).get('action'))

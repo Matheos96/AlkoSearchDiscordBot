@@ -24,5 +24,12 @@ class MyClient(discord.Client):
                 await message.channel.send(line.format(message))
 
 
-client = MyClient()
-client.run('NTY4ODE0NjAzMDAyMzE0NzU0.XLnj-A.rm_tMLP2oZ5sEVTHbmyPI4_Igw8')
+try:
+    f = open("token.txt", "r")
+    token = f.read().strip()
+    f.close()
+    client = MyClient()
+    client.run(token)
+except FileNotFoundError:
+    print("You have to create a file in the same folder as bot.py called 'token.txt' and paste your token into it.")
+
