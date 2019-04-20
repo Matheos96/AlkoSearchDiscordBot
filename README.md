@@ -13,7 +13,9 @@ This bot is made possible by my own original project [AlkoSearchTool](https://gi
 
 ## Installation
 
-*git clone https://github.com/Matheos96/AlkoSearchDiscordBot.git*
+```
+git clone https://github.com/Matheos96/AlkoSearchDiscordBot.git
+```
 
 *cd AlkoSearchDiscordBot*
 
