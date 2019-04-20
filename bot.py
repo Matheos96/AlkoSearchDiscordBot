@@ -1,5 +1,6 @@
 import discord
 from alko_search import search as a_s
+from alko_search import set_sorting
 
 
 class MyClient(discord.Client):
@@ -14,6 +15,22 @@ class MyClient(discord.Client):
         # we do not want the bot to reply to itself
         if message.author.id == self.user.id:
             return
+
+        if message.content.startswith('!alkohelp'):
+            await message.channel.send('Search: !alkosearch product name\n\n'
+                                       'Change sorting of search results: !alkosort [1-4]\n'
+                                       '1. Alphabetical Order A-Ö (default)\n'
+                                       '2. Alphabetical Order Ö-A'
+                                       '\n3. By Price, lowest first\n'
+                                       '4. By Price, highest first'.format(message))
+
+        if message.content.startswith('!alkosort'):
+            sorting = message.content.replace("!alkosort", "").strip()
+            if set_sorting(sorting):
+                await message.channel.send('Sorting method changed!'.format(message))
+            else:
+                await message.channel.send('Failed to change sorting method. Make sure you entered a number between'
+                                           ' 1 and 4'.format(message))
 
         if message.content.startswith('!alkosearch'):
             search_term = message.content.replace("!alkosearch", "").strip()

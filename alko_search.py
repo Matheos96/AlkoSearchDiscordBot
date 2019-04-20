@@ -27,22 +27,21 @@ SEARCH_URL_DEFAULT = "https://www.alko.fi/INTERSHOP/web/WFS/Alko-OnlineShop-Site
                      "ProductPagingRandom?Context=ViewParametricSearch-ProductPagingRandom"
 
 
-def set_sorting():
-    print("\n**************Select sorting method**************\n" +
-          "1. Alphabetical Order A-Ö (default)\n" +
-          "2. Alphabetical Order Ö-A" +
-          "\n3. By Price, lowest first\n" +
-          "4. By Price, highest first\n")
-    option = input("Select an option: ")
+def set_sorting(option):
     global sorting
     if option == '1':
         sorting = 'name-asc'
+        return True
     elif option == '2':
         sorting = 'name-desc'
+        return True
     elif option == '3':
         sorting = 'priceWithPant-asc'
+        return True
     elif option == '4':
         sorting = 'priceWithPant-desc'
+        return True
+    return False
 
 
 def get_result_as_array(uri, search_term, nr_of_pages):
