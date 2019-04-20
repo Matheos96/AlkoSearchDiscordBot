@@ -13,15 +13,15 @@ This bot is made possible by my own original project [AlkoSearchTool](https://gi
 
 ## Installation
 
-```
-git clone https://github.com/Matheos96/AlkoSearchDiscordBot.git
+
+```git clone https://github.com/Matheos96/AlkoSearchDiscordBot.git```
 
 
-cd AlkoSearchDiscordBot
+```cd AlkoSearchDiscordBot```
 
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 
-```
+
 
 Create a file in named token.txt and paste your discord bot token into there.
 
