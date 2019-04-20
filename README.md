@@ -23,7 +23,7 @@ This bot is made possible by my own original project [AlkoSearchTool](https://gi
 
 
 
-Create a file in named token.txt and paste your discord bot token into there.
+Create a file in named *token.txt* containing your Discord bot token.
 
 Run using ```python ./bot.py```
 
