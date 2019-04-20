@@ -34,3 +34,13 @@ In the chat:
 ```
 !alkosearch product name
 ```
+
+For help:
+```
+!alkohelp
+```
+
+Change sorting method (more info: !alkohelp):
+```
+!alkosort [1-4]
+```
