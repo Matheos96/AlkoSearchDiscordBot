@@ -15,16 +15,22 @@ This bot is made possible by my own original project [AlkoSearchTool](https://gi
 
 ```
 git clone https://github.com/Matheos96/AlkoSearchDiscordBot.git
+
+
+cd AlkoSearchDiscordBot
+
+pip install -r requirements.txt
+
 ```
 
-*cd AlkoSearchDiscordBot*
+Create a file in named token.txt and paste your discord bot token into there.
 
-*pip install -r requirements.txt*
+Run using ```python ./bot.py```
 
-*Create a file in named token.txt and paste your discord bot token into there.*
-
-*Run using python ./bot.py*
 
 ## Usage: 
 
-*!alkosearch product name (no quotes or anything)*
+In the chat:
+```
+!alkosearch product name
+```
